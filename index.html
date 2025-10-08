@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://kit.fontawesome.com/210c774be2.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    img {
+        object-fit: cover;
+        max-width: 100%;
+        border-radius: 10px;
+        opacity: 0;
+        transform: translateX(300px);
+        transition: all 1s ease-in-out;
+    }
+
+    img.animate {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .card {
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        transform: translateX(-300px);
+        transition: all 1s ease-in-out;
+    }
+
+    .card.animate {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .image-change {
+        width: 500px;
+        height: 500px;
+        object-fit: cover;
+        opacity: 0;
+        transform: translateX(-300px);
+        transition: all 1s ease-in-out;
+    }
+
+    .image-change.animate {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .mt {
+        margin-top: 300px;
+    }
+
+    .story-img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    @media (max-width: 767.98px) {
+        .story-row {
+            flex-direction: column !important;
+        }
+
+        .story-text {
+            order: 2;
+        }
+
+        .story-img-col {
+            order: 1;
+        }
+    }
+
+    .card-img-top {
+        object-fit: cover;
+        height: 300px;
+    }
+</style>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="#Naruto Story">Naruto Story</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Overview">Overview</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#ninjas">Ninjas</a>
+        </li>
+      </ul>
+    </div>
+
+    <form class="d-flex ms-auto" role="search">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-light" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+
+
+
+
+
+    <div id="Naruto Story" class="container-fluid border border-primary  "
+        style="height:1000px ; background-image: url('https://images2.alphacoders.com/137/1370954.png'); background-size: cover; background-position: center;">
+        <div class="row justify-content-center mt gap-2">
+            <div class="col-12 col-md-3 d-flex justify-content-center align-items-center">
+                <div class="text-center card p-3">
+                    <h1 class="mt-3">Naruto Story</h1>
+                    <p>
+                        a young ninja, is mischievous and often ostracized by the villagers because he has Kurama, the
+                        Nine-Tailed Fox demon, sealed inside him since birth. Despite this, he dreams of becoming
+                        Hokage, the strongest ninja and leader of his village, to earn recognition and respect.
+                    </p>
+                    <button class="btn btn-danger">Learn More</button>
+                </div>
+            </div>
+            <div class=" col-12 col-md-8  d-flex justify-content-center "><img class=" rounded " src="./peakpx.jpg"
+                    alt=""></div>
+
+        </div>
+    </div>
+
+
+    <div id="Overview" class="container-fluid p-5" style="     background-image: url(./ss.png);
+ height:auto;width:100%">
+
+        <!-- Example Story Block -->
+        <div class="row align-items-center my-5 story-row">
+            <div class="col-md-6 story-img-col">
+                <img src="https://i.pinimg.com/736x/bd/be/67/bdbe67f5d028fd28b0a3934bcc337805.jpg"
+                    class="story-img shadow" alt="">
+            </div>
+            <div class="col-md-6 story-text">
+                <div class="card p-4 shadow">
+                    <h1>Early Life & Academy Days</h1>
+                    <p>Naruto struggles at the ninja academy but shows determination and bravery. He makes friends like
+                        Sasuke Uchiha and Sakura Haruno, forming Team 7 under their teacher, Kakashi Hatake.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copy for each section (just swap text + image URLs) -->
+
+        <div class="row align-items-center my-5 story-row">
+            <div class="col-md-6 story-img-col">
+                <img src="https://i.redd.it/ziz66sxl4rwb1.png" class="story-img shadow" alt="">
+            </div>
+            <div class="col-md-6 story-text">
+                <div class="card p-4 shadow">
+                    <h1>Chunin Exams</h1>
+                    <p>Naruto and friends participate in the Chunin Exams, where they face powerful ninjas from other
+                        villages. Naruto begins to prove his strength and starts gaining recognition.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center my-5 story-row">
+            <div class="col-md-6 story-img-col">
+                <img src="https://cmsapi-frontend.naruto-official.com/site/api/naruto/Image/get?path=/naruto/import/images/naruto01/101%EF%BD%9E200/110/C124.jpg"
+                    class="story-img shadow" alt="">
+            </div>
+            <div class="col-md-6 story-text">
+                <div class="card p-4 shadow">
+                    <h1>Search for Sasuke</h1>
+                    <p>Sasuke becomes obsessed with revenge against his brother Itachi Uchiha, who massacred their clan.
+                        Sasuke eventually leaves the village to gain power from Orochimaru, and Naruto sets out to bring
+                        him back.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center my-5 story-row">
+            <div class="col-md-6 story-img-col">
+                <img src="https://preview.redd.it/v1tv533ye5c11.jpg?width=640&crop=smart&auto=webp&s=2e95c65379e9b2affd450f2e7aa87dbe0e0c485a"
+                    class="story-img shadow" alt="">
+            </div>
+            <div class="col-md-6 story-text">
+                <div class="card p-4 shadow">
+                    <h1>Naruto’s Growth</h1>
+                    <p>Naruto trains rigorously, learns new jutsu, and develops his control over the Nine-Tails’ chakra.
+                        He grows stronger physically, mentally, and emotionally.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center my-5 story-row">
+            <div class="col-md-6 story-img-col">
+                <img src="https://i.ytimg.com/vi/hgB1e3ZkgPo/maxresdefault.jpg" class="story-img shadow" alt="">
+            </div>
+            <div class="col-md-6 story-text">
+                <div class="card p-4 shadow">
+                    <h1>Fourth Great Ninja War</h1>
+                    <p>A massive war erupts between the allied ninja villages and the criminal organization Akatsuki,
+                        who want to capture all tailed beasts. Naruto becomes a key player in uniting the ninja world.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center my-5 story-row">
+            <div class="col-md-6 story-img-col">
+                <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/12/naruto-how-kishimoto-ruined-naruto-s-hokage-dream.JPG"
+                    class="story-img shadow" alt="">
+            </div>
+            <div class="col-md-6 story-text">
+                <div class="card p-4 shadow">
+                    <h1>Final Battles & Hokage Dream</h1>
+                    <p>Naruto faces Sasuke in an emotional final battle. Both survive and reconcile. Naruto achieves his
+                        lifelong dream of becoming Hokage, earning the respect of everyone.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div id="ninjas" class="container-fluid mt-5">
+        <div class="row justify-content-center gap-2">
+
+
+
+
+
+
+            <div class="col-12 col-md-3 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img style="max-height: 300px;"
+                        src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=cover,format=auto,quality=85,width=1920/keyart/GY9PJ5KWR-backdrop_wide"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Naruto</h5>
+                        <p class="card-text">Naruto is a young ninja who dreams of becoming Hokage, the strongest leader
+                            of his village</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-3 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img style="max-height: 300px;"
+                        src="https://i.pinimg.com/originals/75/9a/aa/759aaa5a107cc67c5ef128346bd831d4.png"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Sasuke</h5>
+                        <p class="card-text">Sasuke Uchiha, Naruto’s rival and friend, is one of the last survivors of
+                            the Uchiha clan.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-3 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img style="max-height: 300px;" src="https://posterwa.com/cdn/shop/files/NARUTO55.jpg?v=1691435927"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Itachi</h5>
+                        <p class="card-text">Itachi is known as a genius ninja who sacrificed everything for the sake of
+                            peace, hiding his true intentions behind a tragic past.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-3 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img style="max-height: 300px;"
+                        src="https://i.pinimg.com/736x/cb/ee/5d/cbee5d4474d004348bdf7271e0000b70.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Hashirama</h5>
+                        <p class="card-text">Hashirama, founder of Konohagakure and the First Hokage, was a legendary
+                            ninja blessed with unmatched Wood Release abilities.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-3 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img style="max-height: 300px;"
+                        src="https://i.pinimg.com/736x/44/52/e3/4452e3eea234dbdeed8fe8982d7b9561.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Minato</h5>
+                        <p class="card-text">Minato, Naruto’s father and the Fourth Hokage, was a genius ninja known for
+                            his incredible speed and sealing techniques.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-3 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <img style="max-height: 300px;"
+                        src="https://preview.redd.it/every-kage-except-hashirama-vs-edo-madara-v0-vmahvp19gv7e1.png?width=522&format=png&auto=webp&s=e419fbfa5cd5ea88b9cd4814ba5607ace0b69042"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Madara</h5>
+                        <p class="card-text">Madara, co-founder of Konohagakure, sought ultimate power and clashed with
+                            Hashirama in a battle that shaped the ninja world.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <footer class="bg-dark text-white pt-4 mt-5">
+        <div class="container text-center text-md-start">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>Naruto Game</h5>
+                    <p>
+                        Experience the world of ninjas — join Naruto, Sasuke, and more in epic battles.
+                    </p>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="#about" class="text-white text-decoration-none">About</a></li>
+                        <li><a href="#characters" class="text-white text-decoration-none">Characters</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 mb-3 text-center">
+                    <h5>Follow Us</h5>
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-youtube fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center py-3 border-top border-secondary mt-3">
+            © 2025 Naruto Fan Landing Page | Designed with ❤️ using Bootstrap
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const elements = document.querySelectorAll('.card, img, .image-change');
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("animate");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            elements.forEach(el => observer.observe(el));
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
